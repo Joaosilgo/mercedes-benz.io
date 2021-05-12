@@ -29,17 +29,17 @@ const routes = [
     name: "Details",
     component: Details,
   },
- // { 
-    //path: '*',
- //   path: '/:catchAll(.*)*',
- //  component: NotFound 
- // },
- // ,
-    {
+  // { 
+  //path: '*',
+  //   path: '/:catchAll(.*)*',
+  //  component: NotFound 
+  // },
+  // ,
+  {
     // catch all 404 - define at the very end
     path: "*",
     component: NotFound
-    }
+  }
 ];
 
 const router = new VueRouter({
