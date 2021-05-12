@@ -1,14 +1,14 @@
 <template>
   <div id="home">
-     <!-- max-height="700px" -->
+     <!-- max-height="700px" lazy-src="../images/banner.jpg"    src= "../images/banner.jpg"  -->
     <v-img
     
       dark
     max-height="500px"
+      src="https://images.unsplash.com/photo-1579558448624-1a4b3d50d17c?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258M3xmZjEzWVg3TlJDWXx8fHx8Mnx8MTYyMDY4NDk1OA&ixlib=rb-1.2.1"
     
-      src= "../images/banner.jpg"
+      lazy-src="https://images.unsplash.com/photo-1579558448624-1a4b3d50d17c?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258M3xmZjEzWVg3TlJDWXx8fHx8Mnx8MTYyMDY4NDk1OA&ixlib=rb-1.2.1"
       
-      lazy-src="../images/banner.jpg"
     >
       <v-layout fill-height align-center>
         <v-container>
