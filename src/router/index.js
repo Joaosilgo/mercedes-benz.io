@@ -14,9 +14,14 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/home",
+    alias:"/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: '/mercedes-benz.io/',
+    redirect: '/'
   },
   {
     path: "/about",
