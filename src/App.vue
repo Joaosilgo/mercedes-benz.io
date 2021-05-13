@@ -34,33 +34,36 @@ export default {
 
 <template>
   <v-app>
-    <p-toolbar />
+    <!--  <p-toolbar />
     <v-content style="background-color: white">
-      <!-- <HelloWorld /> -->
+       <HelloWorld /> 
       <router-view ></router-view>
     </v-content>
 
- 
       <p-footer />
-    
-  
+    -->
+    <p-toolbar />
+    <Home />
+    <p-footer />
   </v-app>
 </template>
 
 <script>
 import PToolbar from "./components/PToolbar";
 import PFooter from "./components/PFooter";
+import Home from "./views/Home";
 // import HelloWorld from "./components/HelloWorld";
 export default {
   name: "App",
   components: {
     // HelloWorld,
+    Home,
     PToolbar,
-    PFooter
+    PFooter,
   },
   data: () => ({
     //
-  })
+  }),
 };
 </script>
 
