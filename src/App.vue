@@ -43,7 +43,7 @@ export default {
       <p-footer />
     -->
     <p-toolbar />
-    <Home />
+     <router-view />
     <p-footer />
   </v-app>
 </template>
