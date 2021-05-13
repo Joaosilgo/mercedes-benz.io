@@ -127,6 +127,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist"),
+        publicPath: "/mercedes-benz.io/",
     },
     module: {
         rules: [
