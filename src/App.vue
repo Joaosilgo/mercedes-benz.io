@@ -43,8 +43,44 @@ export default {
       <p-footer />
     -->
     <p-toolbar />
-     <router-view />
-    <p-footer />
+        <v-img
+    
+      dark
+    max-height="500px"
+      src="https://images.unsplash.com/photo-1579558448624-1a4b3d50d17c?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258M3xmZjEzWVg3TlJDWXx8fHx8Mnx8MTYyMDY4NDk1OA&ixlib=rb-1.2.1"
+    
+      lazy-src="https://images.unsplash.com/photo-1579558448624-1a4b3d50d17c?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258M3xmZjEzWVg3TlJDWXx8fHx8Mnx8MTYyMDY4NDk1OA&ixlib=rb-1.2.1"
+      
+    >
+      <v-layout fill-height align-center>
+        <v-container>
+          <v-row align="center" justify="center" class="white--text">
+            <v-col cols="12">
+              <div
+                :class="{
+                  'display-2 font-weight-bold ': $vuetify.breakpoint.smAndUp,
+                  'title font-weight-bold': $vuetify.breakpoint.smAndDown,
+                }"
+              >
+                Welcome to my page.
+              </div>
+              <div
+                :class="{
+                  headline: $vuetify.breakpoint.smAndUp,
+                  'subtitle-1': $vuetify.breakpoint.smAndDown,
+                }"
+              >
+                I make applications.
+              </div>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-layout>
+    </v-img>
+     <router-view >
+   
+     </router-view>
+  
   </v-app>
 </template>
 
