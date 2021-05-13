@@ -45,11 +45,9 @@ export default {
 
     <p-toolbar />
 
-    <transition>
-  <keep-alive>
+
     <router-view></router-view>
-  </keep-alive>
-</transition>
+
     
     <!--   <router-view>
     </router-view> -->
