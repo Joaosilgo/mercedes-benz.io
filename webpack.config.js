@@ -315,7 +315,7 @@ module.exports = {
             name: 'Mercedes-Benz.IO PWA',
             description: 'Mercedes-Benz.IO ShowCase',
             start_url: '/mercedes-benz.io/?utm_source=a2hs',
-            publicPath:'/mercedes-benz.io/',
+            publicPath:'https://joaosilgo.github.io/mercedes-benz.io',
             background_color: '#00adef',
             display: 'fullscreen',
             dir: 'auto',
