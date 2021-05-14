@@ -319,7 +319,7 @@ module.exports = {
             display: 'standalone',
             orientation: 'portrait',
             theme_color: '#00adef',
-            scope: '/mercedes-benz.io',
+            scope: '/',
     
           
             icons: [
