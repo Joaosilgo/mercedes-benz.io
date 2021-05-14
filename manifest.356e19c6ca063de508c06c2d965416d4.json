@@ -36,6 +36,7 @@
       "icons": [
         {
           "src": "C:\\Users\\joao2\\OneDrive\\Documentos\\webpack\\public\\icons\\192.png",
+          "type": "image/png",
           "sizes": "192x192"
         }
       ]
