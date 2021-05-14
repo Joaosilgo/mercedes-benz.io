@@ -314,12 +314,12 @@ module.exports = {
             short_name: 'Mercedes-Benz.IO',
             name: 'Mercedes-Benz.IO PWA',
             description: 'Mercedes-Benz.IO ShowCase',
-            start_url: '/',
+            start_url: '/?utm_source=a2hs',
             background_color: '#00adef',
             display: 'standalone',
             orientation: 'portrait',
             theme_color: '#00adef',
-            scope: '/',
+    
           
             icons: [
               {
