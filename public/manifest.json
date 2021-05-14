@@ -1,0 +1,26 @@
+{
+    "short_name": "Mercedes-Benz.IO",
+    "name": "Mercedes-Benz.IO PWA",
+    "icons": [
+      {
+        "src": "icons/192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }, 
+      {
+        "src": "icons/180.png",
+        "type": "image/png",
+        "sizes": "180x180"
+      },      
+      {
+        "src": "icons/32.png",
+        "type": "image/png",
+        "sizes": "32x32"
+      }
+    ],
+    "start_url": "/?utm_source=a2hs",
+    "background_color": "#00adef",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#00adef"
+  }

@@ -112,12 +112,15 @@ module.exports = {
 const HtmlwebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //const { VuetifyLoaderPlugin } = require('vuetify-loader');
-
-
+//const WorkboxPlugin = require('workbox-webpack-plugin');
+const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
-
 const { VuetifyLoaderPlugin } = require('vuetify-loader')
 
 module.exports = {
@@ -127,7 +130,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist"),
-       // publicPath: "/mercedes-benz.io/",
+        filename: '[name].js',
+        publicPath: "/",
     },
     module: {
         rules: [
@@ -140,7 +144,6 @@ module.exports = {
                 }
 
             },
-
             {
                 test: /\.vue$/,
                 loader: "vue-loader",
@@ -152,44 +155,61 @@ module.exports = {
                         loader: "html-loader",
                         options: {
                             minimize: true,
-
                         }
 
                     }
                 ]
             },
+            /*
+                        {
+                            test: /\.(jpeg|png|jpg)$/i,
+                            use: [{
+                                loader: 'file-loader',
+                                options: {
+                                    name: '[name].[ext]',
+                                    outputPath: 'images',
+                                    publicPath: 'images',
+                                    emitFile: true,
+                                    esModule: false
+                                }
+                            },]
+            
+            
+            
+            
+                            // loader: 'file-loader',
+                            //  use: [
+                            //  'file-loader'
+                            //   ],
+                            // options: {
+                            //  name: '[name].[hash:6].[ext]',
+                            //  name: '[name].[ext]',
+            
+                            //  outputPath:'images',
+                            //  publicPath:'images',
+                            /// emitFile: true,
+                            //esModule:false
+            
+            
+                            //  }
+            
+                            // use: [
+                            //     'file-loader'
+                            // ]
+            
+                        },
+                        */
+            
             {
-                test: /\.(jpeg|png|jpg)$/i,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'images',
-                        publicPath: 'images',
-                        emitFile: true,
-                        esModule: false
-                    }
-                },]
-                // loader: 'file-loader',
-                //  use: [
-                //  'file-loader'
-                //   ],
-                // options: {
-                //  name: '[name].[hash:6].[ext]',
-                //  name: '[name].[ext]',
-
-                //  outputPath:'images',
-                //  publicPath:'images',
-                /// emitFile: true,
-                //esModule:false
-
-
-                //  }
-
-                // use: [
-                //     'file-loader'
-                // ]
-
+                test: /\.(woff(2)?|ttf|eot|svg|gif|png|jpe?g)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 60,
+                    fallback: 'file-loader',
+                    publicPath: './img',
+                    outputPath: './img',
+                    name: '[name].[ext]',
+                },
             },
             {
                 test: /\.scss$/,
@@ -251,8 +271,10 @@ module.exports = {
         //    template: "./src/index.html",
         //   filename: "./index.html"
         //}),
+        new CleanWebpackPlugin(),
         new HtmlwebPackPlugin({
             template: path.resolve(__dirname, "public", "index.html"),
+            inject: true
             //   favicon: "./public/favicon.ico",
         }),
 
@@ -261,7 +283,64 @@ module.exports = {
             chunkFilename: "[id].css"
         }),
         new VueLoaderPlugin(),
-        new VuetifyLoaderPlugin()
+        new VuetifyLoaderPlugin(),
+
+        /*
+                new CopyWebpackPlugin({
+                    patterns: [
+                        { from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') ,toType: 'dir' },
+        
+                        
+                      //  { toType: 'dir' }
+                    ]
+                }),
+              **/
+
+        //       new SWPrecacheWebpackPlugin({
+        //           cacheId: 'my-pwa-vue-app',
+        //           filename: 'service-worker-cache.js',
+        //           staticFileGlobs: ['dist/**/*.{js,css}', '/'],
+        //           minify: true,
+        //           stripPrefix: 'dist/',
+        //           dontCacheBustUrlsMatching: /\.\w{6}\./
+        //      })
+        new WorkboxWebpackPlugin.GenerateSW({
+            swDest: 'sw.js',
+            clientsClaim: true,
+            skipWaiting: true,
+           
+          }),
+          new WebpackPwaManifest({
+            short_name: 'Mercedes-Benz.IO',
+            name: 'Mercedes-Benz.IO PWA',
+            description: 'Mercedes-Benz.IO ShowCase',
+            start_url: '/',
+            background_color: '#00adef',
+            display: 'standalone',
+            orientation: 'portrait',
+            theme_color: '#00adef',
+            scope: '/',
+          
+            icons: [
+              {
+                src: path.resolve('public/icons/192.png'),
+                type: 'image/png',
+                sizes: '192x192',
+              },
+              {
+                src: path.resolve('public/icons/180.png'),
+                type: 'image/png',
+                sizes: '180x180',
+              },
+              {
+                src: path.resolve('public/icons/32.png'),
+                type: 'image/png',
+                sizes: '32x32',
+              },
+            ],
+          }),
+
+
 
     ],
     resolve: {
