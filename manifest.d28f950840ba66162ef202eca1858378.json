@@ -23,6 +23,5 @@
   "start_url": "/",
   "description": "Mercedes-Benz.IO ShowCase",
   "background_color": "#00adef",
-  "theme_color": "#00adef",
-  "scope": "/"
+  "theme_color": "#00adef"
 }
