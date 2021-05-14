@@ -314,21 +314,23 @@ module.exports = {
             short_name: 'Mercedes-Benz.IO',
             name: 'Mercedes-Benz.IO PWA',
             description: 'Mercedes-Benz.IO ShowCase',
-            start_url: '/mercedes-benz.io/?source=pwa',
-            publicPath: 'https://joaosilgo.github.io/mercedes-benz.io',
+            //   start_url: '/mercedes-benz.io/?source=pwa',
+            start_url: '/?source=pwa',
+            // publicPath: 'https://joaosilgo.github.io/mercedes-benz.io',
             background_color: '#00adef',
             display: 'fullscreen',
             dir: 'auto',
             lang: 'pt',
             prefer_related_applications: false,
-            url: 'https://joaosilgo.github.io/mercedes-benz.io',
+            //  url: 'https://joaosilgo.github.io/mercedes-benz.io',
             screenshots: [],
             shortcuts: [
                 {
                     name: 'Mercedes-Benz.IO • ',
                     short_name: 'Mercedes-Benz.IO • ',
                     description: 'Mercedes-Benz.IO • ',
-                    url: '/mercedes-benz.io/?utm_source=homescreen',
+                    //   url: '/mercedes-benz.io/?utm_source=homescreen',
+                    url: '/?utm_source=homescreen',
                     icons: [
                         {
                             src: path.resolve('public/icons/192.png'),
@@ -344,7 +346,8 @@ module.exports = {
             ],
             orientation: 'portrait',
             theme_color: '#00adef',
-            scope: '/mercedes-benz.io/',
+            //  scope: '/mercedes-benz.io/'
+            scope: '/',
 
 
             icons: [
