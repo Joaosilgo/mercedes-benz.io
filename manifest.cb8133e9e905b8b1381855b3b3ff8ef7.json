@@ -20,7 +20,7 @@
   "short_name": "Mercedes-Benz.IO",
   "orientation": "portrait",
   "display": "fullscreen",
-  "start_url": "/?source=pwa",
+  "start_url": "/mercedes-benz.io/?source=pwa",
   "description": "Mercedes-Benz.IO ShowCase",
   "background_color": "#00adef",
   "dir": "auto",
@@ -32,7 +32,7 @@
       "name": "Mercedes-Benz.IO • ",
       "short_name": "Mercedes-Benz.IO • ",
       "description": "Mercedes-Benz.IO • ",
-      "url": "/?utm_source=homescreen",
+      "url": "/mercedes-benz.io/?utm_source=homescreen",
       "icons": [
         {
           "src": "C:\\Users\\joao2\\OneDrive\\Documentos\\webpack\\public\\icons\\192.png",
@@ -47,5 +47,5 @@
     "Frontend"
   ],
   "theme_color": "#00adef",
-  "scope": "/"
+  "scope": "/mercedes-benz.io/"
 }
