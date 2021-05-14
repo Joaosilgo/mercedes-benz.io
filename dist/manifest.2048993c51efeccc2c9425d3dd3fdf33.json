@@ -20,11 +20,28 @@
   "short_name": "Mercedes-Benz.IO",
   "orientation": "portrait",
   "display": "fullscreen",
-  "start_url": "/mercedes-benz.io/?utm_source=a2hs",
+  "start_url": "/mercedes-benz.io/?source=pwa",
   "description": "Mercedes-Benz.IO ShowCase",
   "background_color": "#00adef",
   "dir": "auto",
   "lang": "pt",
+  "prefer_related_applications": false,
+  "url": "https://joaosilgo.github.io/mercedes-benz.io",
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Mercedes-Benz.IO • ",
+      "short_name": "Mercedes-Benz.IO • ",
+      "description": "Mercedes-Benz.IO • ",
+      "url": "/mercedes-benz.io/?utm_source=homescreen",
+      "icons": [
+        {
+          "src": "C:\\Users\\joao2\\OneDrive\\Documentos\\webpack\\public\\icons\\192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
   "categories": [
     "Vue",
     "Mercedes-Benz.IO",

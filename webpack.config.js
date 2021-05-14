@@ -199,7 +199,7 @@ module.exports = {
             
                         },
                         */
-            
+
             {
                 test: /\.(woff(2)?|ttf|eot|svg|gif|png|jpe?g)$/,
                 loader: 'url-loader',
@@ -308,46 +308,63 @@ module.exports = {
             swDest: 'sw.js',
             clientsClaim: true,
             skipWaiting: true,
-           
-          }),
-          new WebpackPwaManifest({
+
+        }),
+        new WebpackPwaManifest({
             short_name: 'Mercedes-Benz.IO',
             name: 'Mercedes-Benz.IO PWA',
             description: 'Mercedes-Benz.IO ShowCase',
-            start_url: '/mercedes-benz.io/?utm_source=a2hs',
-            publicPath:'https://joaosilgo.github.io/mercedes-benz.io',
+            start_url: '/mercedes-benz.io/?source=pwa',
+            publicPath: 'https://joaosilgo.github.io/mercedes-benz.io',
             background_color: '#00adef',
             display: 'fullscreen',
             dir: 'auto',
             lang: 'pt',
+            prefer_related_applications: false,
+            url: 'https://joaosilgo.github.io/mercedes-benz.io',
+            screenshots: [],
+            shortcuts: [
+                {
+                    name: 'Mercedes-Benz.IO • ',
+                    short_name: 'Mercedes-Benz.IO • ',
+                    description: 'Mercedes-Benz.IO • ',
+                    url: '/mercedes-benz.io/?utm_source=homescreen',
+                    icons: [
+                        {
+                            src: path.resolve('public/icons/192.png'),
+                            sizes: '192x192'
+                        }
+                    ]
+                }
+            ],
             categories: [
                 'Vue',
                 'Mercedes-Benz.IO',
                 'Frontend'
-              ],
+            ],
             orientation: 'portrait',
             theme_color: '#00adef',
             scope: '/mercedes-benz.io/',
-    
-          
+
+
             icons: [
-              {
-                src: path.resolve('public/icons/192.png'),
-                type: 'image/png',
-                sizes: '192x192',
-              },
-              {
-                src: path.resolve('public/icons/180.png'),
-                type: 'image/png',
-                sizes: '180x180',
-              },
-              {
-                src: path.resolve('public/icons/32.png'),
-                type: 'image/png',
-                sizes: '32x32',
-              },
+                {
+                    src: path.resolve('public/icons/192.png'),
+                    type: 'image/png',
+                    sizes: '192x192',
+                },
+                {
+                    src: path.resolve('public/icons/180.png'),
+                    type: 'image/png',
+                    sizes: '180x180',
+                },
+                {
+                    src: path.resolve('public/icons/32.png'),
+                    type: 'image/png',
+                    sizes: '32x32',
+                },
             ],
-          }),
+        }),
 
 
 
