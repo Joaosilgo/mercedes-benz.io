@@ -131,7 +131,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: '[name].js',
-        publicPath: "/",
+        // publicPath: "/mercedes-benz.io",
+       // publicPath: "/",
     },
     module: {
         rules: [
@@ -304,19 +305,22 @@ module.exports = {
         //           stripPrefix: 'dist/',
         //           dontCacheBustUrlsMatching: /\.\w{6}\./
         //      })
+
+
         new WorkboxWebpackPlugin.GenerateSW({
             swDest: 'sw.js',
             clientsClaim: true,
             skipWaiting: true,
 
         }),
+
         new WebpackPwaManifest({
             short_name: 'Mercedes-Benz.IO',
             name: 'Mercedes-Benz.IO PWA',
             description: 'Mercedes-Benz.IO ShowCase',
-            //   start_url: '/mercedes-benz.io/?source=pwa',
-            start_url: '/?source=pwa',
-            // publicPath: 'https://joaosilgo.github.io/mercedes-benz.io',
+            //start_url: '/mercedes-benz.io/?source=pwa',
+              start_url: '/?source=pwa',
+           //  publicPath: 'https://joaosilgo.github.io/mercedes-benz.io',
             background_color: '#00adef',
             display: 'fullscreen',
             dir: 'auto',
@@ -329,11 +333,12 @@ module.exports = {
                     name: 'Mercedes-Benz.IO • ',
                     short_name: 'Mercedes-Benz.IO • ',
                     description: 'Mercedes-Benz.IO • ',
-                    //   url: '/mercedes-benz.io/?utm_source=homescreen',
-                    url: '/?utm_source=homescreen',
+                  //  url: '/mercedes-benz.io/?utm_source=homescreen',
+                     url: 'https://joaosilgo.github.io/mercedes-benz.io/',
                     icons: [
                         {
                             src: path.resolve('public/icons/192.png'),
+                            type: 'image/png',
                             sizes: '192x192'
                         }
                     ]
@@ -346,8 +351,8 @@ module.exports = {
             ],
             orientation: 'portrait',
             theme_color: '#00adef',
-            //  scope: '/mercedes-benz.io/'
-            scope: '/',
+            //scope: '/mercedes-benz.io/',
+             scope: '/',
 
 
             icons: [
