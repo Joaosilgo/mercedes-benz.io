@@ -20,9 +20,9 @@
   "short_name": "Mercedes-Benz.IO",
   "orientation": "portrait",
   "display": "standalone",
-  "start_url": "/?utm_source=a2hs",
+  "start_url": "/mercedes-benz.io/?utm_source=a2hs",
   "description": "Mercedes-Benz.IO ShowCase",
   "background_color": "#00adef",
   "theme_color": "#00adef",
-  "scope": "/mercedes-benz.io"
+  "scope": "/mercedes-benz.io/"
 }
