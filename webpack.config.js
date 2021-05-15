@@ -331,6 +331,7 @@ module.exports = {
             }]*/
           runtimeCaching: [{
                   urlPattern: new RegExp('^https:\/\/fonts\.googleapis\.com/'),
+                  urlPattern: new RegExp('\.(png|svg|jpg|jpeg)$'),
                   handler: 'StaleWhileRevalidate',
               }]
               
