@@ -1,6 +1,5 @@
 <template>
   <div class="block latestPostBlock">
-      
     <v-container>
       <h2 class="text-center">Latest Post</h2>
       <v-row>
@@ -12,12 +11,11 @@
               height="200px"
               src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
             >
-            
               <v-card-title>{{ item.name }}</v-card-title>
             </v-img>
             <v-card-subtitle class="pb-0">{{ item.language }}</v-card-subtitle>
             <v-card-text class="text--primary">
-            <!--  <div>{{ item.description }}</div> -->
+              <!--  <div>{{ item.description }}</div> -->
             </v-card-text>
             <v-card-actions>
               <!-- <v-btn color="primary" text>More</v-btn> -->
@@ -34,7 +32,7 @@
                     full_name: item.full_name,
                     owner: item.owner,
                     license: item.license,
-                    raw: item
+                    raw: item,
                   },
                 }"
                 color="light-blue darken-1"
@@ -49,11 +47,18 @@
         </v-col>
       </v-row>
       <v-container>
-      <div v-ripple="{ center: true }" class="text-center">
-        <v-btn color="light-blue darken-1" elevation="24" medium rounded text
-          >See More Projects</v-btn
-        >
-      </div>
+        <div v-ripple="{ center: true }" class="text-center">
+          <v-btn
+            color="light-blue darken-1"
+            elevation="24"
+            medium
+            rounded
+            text
+            :x-small="$vuetify.breakpoint.smAndDown"
+            to="/work"
+            >See More Projects</v-btn
+          >
+        </div>
       </v-container>
     </v-container>
   </div>
@@ -64,8 +69,8 @@ import axios from "axios";
 export default {
   name: "LatestPost",
   methods: {
-    fetchRepo() {
-      /*
+    // fetchRepo() {
+    /*
       fetch(this.url)
         .then((response) => response.json())
         .then((json) => {
@@ -80,6 +85,7 @@ export default {
         });
     },
     */
+    /*
       axios
         .get(this.url)
         .then((response) => {
@@ -89,10 +95,25 @@ export default {
         .catch((e) => {
           console.log("error", err);
         });
-    },
+        */
+    //  },
   },
-  created() {
-    this.fetchRepo();
+  async created() {
+    //   this.fetchRepo();
+
+    try {
+      const response = await axios.get(this.url);
+      // this.posts = response.data
+      this.item = response.data;
+    } catch (e) {
+      //this.errors.push(e)
+      console.log("error", err);
+    }
+  },
+
+  watch: {
+    // call again the method if the route changes
+    $route: "fetchRepo",
   },
   data: () => ({
     show: false,
