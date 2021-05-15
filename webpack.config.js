@@ -349,7 +349,7 @@ module.exports = {
             dir: 'auto',
             lang: 'pt',
             prefer_related_applications: false,
-            //  url: 'https://joaosilgo.github.io/mercedes-benz.io',
+            url: '/',
             screenshots: [],
             shortcuts: [
                 {
@@ -357,7 +357,8 @@ module.exports = {
                     short_name: 'Mercedes-Benz.IO • ',
                     description: 'Mercedes-Benz.IO • ',
                     //  url: '/mercedes-benz.io/?utm_source=homescreen',
-                    url: 'https://joaosilgo.github.io/mercedes-benz.io/',
+                    //   url: 'https://joaosilgo.github.io/mercedes-benz.io/',
+                    url: '/?utm_source=homescreen',
                     icons: [
                         {
                             src: path.resolve('public/icons/192.png'),
