@@ -1,14 +1,11 @@
 <template>
   <div id="home">
-     <!-- max-height="700px" lazy-src="../images/banner.jpg"    src= "../images/banner.jpg"  -->
+    <!-- max-height="700px" lazy-src="../images/banner.jpg"    src= "../images/banner.jpg"  -->
     <v-img
-    
       dark
-    max-height="500px"
+      max-height="500px"
       src="https://images.unsplash.com/photo-1579558448624-1a4b3d50d17c?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258M3xmZjEzWVg3TlJDWXx8fHx8Mnx8MTYyMDY4NDk1OA&ixlib=rb-1.2.1"
-    
       lazy-src="https://images.unsplash.com/photo-1579558448624-1a4b3d50d17c?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258M3xmZjEzWVg3TlJDWXx8fHx8Mnx8MTYyMDY4NDk1OA&ixlib=rb-1.2.1"
-      
     >
       <v-layout fill-height align-center>
         <v-container>
@@ -30,10 +27,14 @@
               >
                 I make applications.
               </div>
+
+             
             </v-col>
           </v-row>
         </v-container>
+          <Scroll />
       </v-layout>
+     
     </v-img>
     <!--
     <img class="logo" src="../images/mercedes-benz-io-white.png" alt="logo" />
@@ -72,7 +73,10 @@
 
 import PContactInfo from "../components/PContactInfo";
 import PProjects from "../components/PProjects";
-import img from '../images/banner.jpg'
+
+import Scroll from "../components/Scroll-icon";
+
+//import img from '../images/banner.jpg'
 
 export default {
   name: "home",
@@ -80,10 +84,10 @@ export default {
     // HelloWorld,
     PProjects,
     PContactInfo,
+    Scroll
   },
   data() {
     return {
-      
       aboutText:
         "I enjoy building apps in my free time when I'm not doing much. Looking to get into machine learning and trying to automate as many things as possible. Love to encourage new coders that they can do it too! I'm not very smart, just curious to see how things work. I'm also not that good of a writer as you can see. lol. Anyways, you are free to download any of the code thats on my github! And I hope you have a great day!",
 

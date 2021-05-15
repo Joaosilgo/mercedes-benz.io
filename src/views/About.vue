@@ -2,7 +2,7 @@
   <div id="home">
     <v-img
       dark
-      max-height="700px"
+      max-height="500px"
       src="https://images.unsplash.com/photo-1579558448624-1a4b3d50d17c?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258M3xmZjEzWVg3TlJDWXx8fHx8Mnx8MTYyMDY4NDk1OA&ixlib=rb-1.2.1"
     >
       <v-layout fill-height align-center>

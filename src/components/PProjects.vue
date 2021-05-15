@@ -1,5 +1,6 @@
 <template>
   <div class="block latestPostBlock">
+      
     <v-container>
       <h2 class="text-center">Latest Post</h2>
       <v-row>
@@ -11,6 +12,7 @@
               height="200px"
               src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
             >
+            
               <v-card-title>{{ item.name }}</v-card-title>
             </v-img>
             <v-card-subtitle class="pb-0">{{ item.language }}</v-card-subtitle>

@@ -3,40 +3,30 @@
     <v-layout justify-center>
       <v-container>
         <v-layout>
-         
-            <div
-              :class="{
-                'display-1 font-weight-bold': $vuetify.breakpoint.smAndUp,
-                'title font-weight-bold': $vuetify.breakpoint.smAndDown,
-              }"
-            >
+          <div
+            :class="{
+              'display-1 font-weight-bold': $vuetify.breakpoint.smAndUp,
+              'title font-weight-bold': $vuetify.breakpoint.smAndDown,
+            }"
+          >
             Joẵo Gomes●
             <!-- <v-btn plain text to="/">
               
              </v-btn> -->
-            </div>
-          
+          </div>
+
           <v-spacer></v-spacer>
           <v-toolbar-items class="text-right">
-
-             <v-btn :x-small="$vuetify.breakpoint.smAndDown" to="/" text
+            <v-btn :x-small="$vuetify.breakpoint.smAndDown" to="/" text
               >Home</v-btn
             >
             <v-btn :x-small="$vuetify.breakpoint.smAndDown" to="/about" text
               >About</v-btn
             >
-            <v-btn
-              :x-small="$vuetify.breakpoint.smAndDown"
-              @click="$vuetify.goTo('#portfolio', options)"
-              text
+            <v-btn :x-small="$vuetify.breakpoint.smAndDown" to="/work" text
               >My Work</v-btn
             >
-            <v-btn
-              :x-small="$vuetify.breakpoint.smAndDown"
-              @click="$vuetify.goTo('#contact', options)"
-              text
-              >Contact</v-btn
-            >
+            <v-btn :x-small="$vuetify.breakpoint.smAndDown" text>Contact</v-btn>
           </v-toolbar-items>
         </v-layout>
       </v-container>

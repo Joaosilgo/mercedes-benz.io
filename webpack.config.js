@@ -212,6 +212,7 @@ module.exports = {
                     name: '[name].[ext]',
                 },
             },
+            /*
             {
                 test: /\.scss$/,
                 use: [
@@ -259,7 +260,20 @@ module.exports = {
                     },
                 ],
             },
+            */
 
+
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
+                ],
+            }
 
 
         ]
@@ -312,9 +326,38 @@ module.exports = {
             clientsClaim: true,
             skipWaiting: true,
             // Define runtime caching rules.
-          /*  runtimeCaching: [{
-                // Match any request that ends with .png, .jpg, .jpeg or .svg.
-                urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+            /*  runtimeCaching: [{
+                  // Match any request that ends with .png, .jpg, .jpeg or .svg.
+                  urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+  
+                  // Apply a cache-first strategy.
+                  handler: 'CacheFirst',
+  
+                  options: {
+                      // Use a custom cache name.
+                      cacheName: 'images',
+  
+                      // Only cache 10 images.
+                      expiration: {
+                          maxEntries: 10,
+                      },
+                  },
+              }]*/
+            runtimeCaching: [{
+                urlPattern: new RegExp('^https:\/\/fonts\.googleapis\.com/'),
+                //  urlPattern: new RegExp('\.(png|svg|jpg|jpeg)$'),
+                handler: 'StaleWhileRevalidate',
+            },
+            {
+                // https://api.github.com/users/JoaoSilgo/repos?per_page=100"
+                urlPattern: /^https:\/\/node-hnapi.herokuapp.com\/.*/,
+                handler: 'NetworkFirst'
+            },
+
+            {
+
+                // Match any request ends with .png, .jpg, .jpeg or .svg.
+                urlPattern: /.(?:png|jpg|jpeg|svg)$/,
 
                 // Apply a cache-first strategy.
                 handler: 'CacheFirst',
@@ -323,18 +366,14 @@ module.exports = {
                     // Use a custom cache name.
                     cacheName: 'images',
 
-                    // Only cache 10 images.
+                    // Only cache 50 images.
                     expiration: {
-                        maxEntries: 10,
-                    },
-                },
-            }]*/
-          runtimeCaching: [{
-                  urlPattern: new RegExp('^https:\/\/fonts\.googleapis\.com/'),
-                  urlPattern: new RegExp('\.(png|svg|jpg|jpeg)$'),
-                  handler: 'StaleWhileRevalidate',
-              }]
-              
+                        maxEntries: 50,
+                    }
+                }
+            }]
+
+
 
         }),
 
@@ -406,7 +445,8 @@ module.exports = {
         alias: {
             vue$: "vue/dist/vue.runtime.esm.js",
         },
-        extensions: ["*", ".js", ".vue", ".json"],
+        extensions: ["*", ".js", ".vue", ".scss", ".json"],
+
     },
 
 }
