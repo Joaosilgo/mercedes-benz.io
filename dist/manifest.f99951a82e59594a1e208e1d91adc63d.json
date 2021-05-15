@@ -26,13 +26,14 @@
   "dir": "auto",
   "lang": "pt",
   "prefer_related_applications": false,
+  "url": "/",
   "screenshots": [],
   "shortcuts": [
     {
       "name": "Mercedes-Benz.IO • ",
       "short_name": "Mercedes-Benz.IO • ",
       "description": "Mercedes-Benz.IO • ",
-      "url": "https://joaosilgo.github.io/mercedes-benz.io/",
+      "url": "/?utm_source=homescreen",
       "icons": [
         {
           "src": "C:\\Users\\joao2\\OneDrive\\Documentos\\webpack\\public\\icons\\192.png",

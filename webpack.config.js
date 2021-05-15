@@ -312,7 +312,7 @@ module.exports = {
             clientsClaim: true,
             skipWaiting: true,
             // Define runtime caching rules.
-            runtimeCaching: [{
+          /*  runtimeCaching: [{
                 // Match any request that ends with .png, .jpg, .jpeg or .svg.
                 urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
 
@@ -328,12 +328,12 @@ module.exports = {
                         maxEntries: 10,
                     },
                 },
-            }]
-            /*  runtimeCaching: [{
+            }]*/
+          runtimeCaching: [{
                   urlPattern: new RegExp('^https:\/\/fonts\.googleapis\.com/'),
                   handler: 'StaleWhileRevalidate',
               }]
-              */
+              
 
         }),
 
