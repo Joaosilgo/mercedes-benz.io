@@ -132,7 +132,7 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: '[name].js',
         // publicPath: "/mercedes-benz.io",
-        publicPath: "/",
+        //publicPath: "/",
     },
     module: {
         rules: [
@@ -311,10 +311,29 @@ module.exports = {
             swDest: 'sw.js',
             clientsClaim: true,
             skipWaiting: true,
+            // Define runtime caching rules.
             runtimeCaching: [{
-                urlPattern: new RegExp('^https:\/\/fonts\.googleapis\.com/'),
-                handler: 'StaleWhileRevalidate',
+                // Match any request that ends with .png, .jpg, .jpeg or .svg.
+                urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+                // Apply a cache-first strategy.
+                handler: 'CacheFirst',
+
+                options: {
+                    // Use a custom cache name.
+                    cacheName: 'images',
+
+                    // Only cache 10 images.
+                    expiration: {
+                        maxEntries: 10,
+                    },
+                },
             }]
+            /*  runtimeCaching: [{
+                  urlPattern: new RegExp('^https:\/\/fonts\.googleapis\.com/'),
+                  handler: 'StaleWhileRevalidate',
+              }]
+              */
 
         }),
 
@@ -323,8 +342,8 @@ module.exports = {
             name: 'Mercedes-Benz.IO PWA',
             description: 'Mercedes-Benz.IO ShowCase',
             //start_url: '/mercedes-benz.io/?source=pwa',
-              start_url: '/?source=pwa',
-           //  publicPath: 'https://joaosilgo.github.io/mercedes-benz.io',
+            start_url: '/?source=pwa',
+            //  publicPath: 'https://joaosilgo.github.io/mercedes-benz.io',
             background_color: '#00adef',
             display: 'fullscreen',
             dir: 'auto',
@@ -337,8 +356,8 @@ module.exports = {
                     name: 'Mercedes-Benz.IO • ',
                     short_name: 'Mercedes-Benz.IO • ',
                     description: 'Mercedes-Benz.IO • ',
-                  //  url: '/mercedes-benz.io/?utm_source=homescreen',
-                     url: 'https://joaosilgo.github.io/mercedes-benz.io/',
+                    //  url: '/mercedes-benz.io/?utm_source=homescreen',
+                    url: 'https://joaosilgo.github.io/mercedes-benz.io/',
                     icons: [
                         {
                             src: path.resolve('public/icons/192.png'),
@@ -356,7 +375,7 @@ module.exports = {
             orientation: 'portrait',
             theme_color: '#00adef',
             //scope: '/mercedes-benz.io/',
-             scope: '/',
+            scope: '/',
 
 
             icons: [
