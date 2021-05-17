@@ -14,6 +14,7 @@
               <v-card-title>{{ item.name }}</v-card-title>
             </v-img>
             <v-card-subtitle class="pb-0">{{ item.language }}</v-card-subtitle>
+             
             <v-card-text class="text--primary">
               <!--  <div>{{ item.description }}</div> -->
             </v-card-text>
@@ -32,6 +33,7 @@
                     full_name: item.full_name,
                     owner: item.owner,
                     license: item.license,
+                    homepage: item.homepage,
                     raw: item,
                   },
                 }"
