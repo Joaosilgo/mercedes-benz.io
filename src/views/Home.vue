@@ -1,5 +1,6 @@
 <template>
   <div id="home">
+    
     <!-- max-height="700px" lazy-src="../images/banner.jpg"    src= "../images/banner.jpg"  -->
     <v-img
       dark
@@ -58,6 +59,7 @@
       </v-layout>
     </v-container>
   </div>
+  
 </template>
 
 
@@ -76,6 +78,7 @@ import PProjects from "../components/PProjects";
 
 import Scroll from "../components/Scroll-icon";
 
+
 //import img from '../images/banner.jpg'
 
 export default {
@@ -85,6 +88,7 @@ export default {
     PProjects,
     PContactInfo,
     Scroll
+    
   },
   data() {
     return {

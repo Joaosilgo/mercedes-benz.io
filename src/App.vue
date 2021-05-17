@@ -58,6 +58,7 @@ export default {
 import PToolbar from "./components/PToolbar";
 import PFooter from "./components/PFooter";
 import Home from "./views/Home";
+
 // import HelloWorld from "./components/HelloWorld";
 export default {
   name: "App",
@@ -66,6 +67,7 @@ export default {
     Home,
     PToolbar,
     PFooter,
+   // Loading
   },
   data: () => ({
     //

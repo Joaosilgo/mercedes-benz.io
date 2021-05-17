@@ -51,7 +51,7 @@
            
 
             </v-card-actions>
-             <v-divider class="mt-6 mx-4"></v-divider>
+             <v-divider inset class="mt-6 mx-4"></v-divider>
               <v-card-text>
                <!--  <div> -->
                 <v-chip  v-if="raw.has_pages" small link :href="raw.homepage" target="_blank" text-color="white" color="lime accent-2"  class="mr-2"   > 
@@ -65,7 +65,7 @@
 
                 
               </v-card-text>
-               <v-divider class="mt-6 mx-4"></v-divider>
+               <v-divider inset class="mt-6 mx-4"></v-divider>
                  <v-card-text>
                      <v-chip small link :href="raw.owner.html_url" target="_blank" text-color="white" color="lime accent-2"  class="mr-2"   > 
                <v-avatar left>
