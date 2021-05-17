@@ -45,12 +45,16 @@ const routes = [
     path: '/:catchAll(.*)*',
     component: NotFound
   },
+  { path: '/:pathMatch(.*)',
+   component: NotFound 
+  },
 
   {
     // catch all 404 - define at the very end
     path: "*",
     component: NotFound
   }
+
 ];
 
 const router = new VueRouter({
