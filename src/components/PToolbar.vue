@@ -26,7 +26,7 @@
             <v-btn :x-small="$vuetify.breakpoint.smAndDown" to="/work" text
               >My Work</v-btn
             >
-            <v-btn :x-small="$vuetify.breakpoint.smAndDown" text>Contact</v-btn>
+          <!--  <v-btn :x-small="$vuetify.breakpoint.smAndDown" to="/" text>Contact</v-btn> -->
           </v-toolbar-items>
         </v-layout>
       </v-container>

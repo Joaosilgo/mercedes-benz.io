@@ -55,8 +55,15 @@
                 Project Showcase for Mercedes-Benz.io
               </h3>
               <p>
-                Project designed to attract attention and show off the abilities of the people involved in it.
-                Project showcase is a simple online portfolio creator to help freelancers and entrepreneurs for showcasing their works to the world. With user-friendly and simple design let users create their own so fast. Projectshowcase users can show who they are and what they have done so far in a one-page website. They can link to their social media and other websites and portals. It is basically a tool for their first impression on daily business life.
+                Project designed to attract attention and show off the abilities
+                of the people involved in it. Project showcase is a simple
+                online portfolio creator to help freelancers and entrepreneurs
+                for showcasing their works to the world. With user-friendly and
+                simple design let users create their own so fast.
+                Projectshowcase users can show who they are and what they have
+                done so far in a one-page website. They can link to their social
+                media and other websites and portals. It is basically a tool for
+                their first impression on daily business life.
               </p>
             </div>
           </v-col>
@@ -72,22 +79,32 @@
           </v-col>
           <v-col cols="12" md="6" align-self="center">
             <div class="pa-lg-16 pa-md-10 px-4 py-16">
-              <h2 class="text-h3 text-center font-weight-black">Vue.js/WebPack</h2>
+              <h2 class="text-h4 text-center font-weight-black">
+                Vue.js/WebPack
+              </h2>
               <h3
                 class="text-h5 text-uppercase font-weight-thin text-center my-8"
               >
-                Vue is a progressive JavaScript framework for building UIs, renowned for its simplicity and rich ecosystem
+                Vue is a progressive JavaScript framework for building UIs,
+                renowned for its simplicity and rich ecosystem
               </h3>
               <p>
-                Vue.js (commonly referred to as Vue; pronounced / vjuː /, like "view") is an open-source model – view – viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members.
+                Vue.js (commonly referred to as Vue; pronounced / vjuː /, like
+                "view") is an open-source model – view – viewmodel front end
+                JavaScript framework for building user interfaces and
+                single-page applications. It was created by Evan You, and is
+                maintained by him and the rest of the active core team members.
               </p>
               <p>
-              Webpack is a tool that lets you compile JavaScript modules, also known as module bundler. Given a large number of files, it generates a single file (or a few files) that run your app. It can perform many operations: helps you bundle your resources.
+                Webpack is a tool that lets you compile JavaScript modules, also
+                known as module bundler. Given a large number of files, it
+                generates a single file (or a few files) that run your app. It
+                can perform many operations: helps you bundle your resources.
               </p>
             </div>
           </v-col>
         </v-row>
-          <v-row no-gutters>
+        <v-row no-gutters>
           <v-col cols="12" md="6" align-self="center">
             <v-img
               max-height="800"
@@ -98,82 +115,139 @@
           </v-col>
           <v-col cols="12" md="6" align-self="center">
             <div class="pa-lg-16 pa-md-10 px-4 py-16">
-              <h2 class="text-h3 text-center font-weight-black">Progressive Web App (PWA)</h2>
+              <h2 class="text-h3 text-center font-weight-black">
+                Progressive Web App (PWA)
+              </h2>
               <h3
                 class="text-h5 text-uppercase font-weight-thin text-center my-8"
               >
-                 Progressive Web App
+                Progressive Web App
               </h3>
               <p>
-               Progressive Web App (PWA) is a term used to denote a new methodology for software development. Unlike traditional applications, a Progressive Web App can be seen as a hybrid evolution between regular web pages (or websites) and a mobile application. This new application model combines features offered by the most modern browsers, with the advantages of using a cell phone.
+                Progressive Web App (PWA) is a term used to denote a new
+                methodology for software development. Unlike traditional
+                applications, a Progressive Web App can be seen as a hybrid
+                evolution between regular web pages (or websites) and a mobile
+                application. This new application model combines features
+                offered by the most modern browsers, with the advantages of
+                using a cell phone.
               </p>
             </div>
           </v-col>
         </v-row>
       </v-container>
     </v-layout>
+     
+        <v-spacer></v-spacer>
 
-    <v-container align-center fluid class="mt-5">
+    <v-container align-center  fluid class="mt-5">
       <div class="block latestPostBlock">
-        <v-container>
-          <h2 class="text-center">Development Tools</h2>
+        <v-container fluid>
+          <h2 class="text-center display-3">Development Tools</h2>
           <v-row justify="center" align="center">
-            <v-col v-for="item in tools" :key="item.id" cols="12" md="4">
-              <v-card outlined elevation="4" class="mx-auto">
+            <v-col v-for="item in tools" :key="item.id" cols="12" md="4" class="mx-auto my-12 pa-3 text-center d-flex flex-column">
+         <!--      <v-card
+                raised
+                hover
+                outlined
+                elevation="4"
+                class=" flex d-flex flex-column"  
+              > -->
                 <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
-                <v-img
+         <!--       <v-img
                   class="white--text align-end"
-                  height="200px"
+                  lazy-src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
                   src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
-                >
-                  <v-card-title
-                    >{{ item.name }}
-                    <v-icon color="white" x-large>{{
+                >  -->
+                 <v-icon color="grey">{{
                       item.icon
-                    }}</v-icon></v-card-title
-                  >
-                  <v-card-subtitle class="white--text pb-0">{{
-                    item.small_description
-                  }}</v-card-subtitle>
-                  <v-card-text>
-                    <div>{{ item.description }}</div>
-                  </v-card-text>
-                </v-img>
-                <!--  <v-card-actions> </v-card-actions> -->
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-        <v-container>
-          <h2 class="text-center">Technologies</h2>
-          <v-row justify="center" align="center">
-            <v-col v-for="item in technologies" :key="item.id" cols="12" md="4">
-              <v-card outlined elevation="4" class="mx-auto">
-                <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
-                <v-img
-                  class="white--text align-end"
-                  height="200px"
-                  src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
-                >
-                  <v-card-title
-                    >{{ item.name }}
-                    <v-icon color="white" x-large>{{ item.icon }}</v-icon>
-                  </v-card-title>
-                  <v-card-subtitle class="white--text pb-0">{{
-                    item.small_description
-                  }}</v-card-subtitle>
-                  <v-card-text>
-                    <div>{{ item.description }}</div>
-                  </v-card-text>
-                </v-img>
-                <!--  <v-card-actions> </v-card-actions> -->
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
+                    }}</v-icon>
 
-        <v-container>
-          <h2 class="text-center">Technologies</h2>
+                      <h1 class="justify-center display-1 text-center grey--text">{{ item.name }}</h1>
+                  <h3 class="justify-center text-h5 grey--text pb-0">{{item.small_description}}</h3>
+                  <p class="justify-center grey--text">{{ item.description }} </p> 
+<!-- 
+                  <v-card-title class="justify-center display-1 text-center grey--text">{{ item.name }}</v-card-title>
+                  <v-card-subtitle class="text-h5 grey--text pb-0">{{item.small_description}}</v-card-subtitle>
+                  <v-card-text class="grey--text"><div>{{ item.description }}</div></v-card-text> -->
+              <!--  </v-img> -->
+                <!--  <v-card-actions> </v-card-actions> -->
+            <!--   </v-card>  -->
+            </v-col>
+          </v-row>
+        </v-container>
+        
+        <v-spacer></v-spacer>
+        <v-container fluid>
+          <h2 class="text-center display-3">Technologies</h2>
+          <v-row justify="center" align="center">
+            <v-col v-for="item in technologies" :key="item.id" cols="12" md="4" class="mx-auto my-12 pa-3 text-center d-flex flex-column">
+         <!--     <v-card
+                raised
+                hover
+                outlined
+                elevation="4"
+                class="  flex d-flex flex-column"
+              > -->
+                <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
+        <!--         <v-img
+                  class="white--text align-end"
+                   lazy-src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
+                  src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
+                > -->
+             
+
+
+                 <v-icon color="grey">{{
+                      item.icon
+                    }}</v-icon>
+
+                      <h1 class="justify-center display-1 text-center grey--text">{{ item.name }}</h1>
+                  <h3 class="justify-center text-h5 grey--text pb-0">{{item.small_description}}</h3>
+                  <p class="justify-center grey--text">{{ item.description }} </p> 
+           <!--     </v-img> -->
+                <!--  <v-card-actions> </v-card-actions> -->
+           <!--   </v-card>  -->
+            </v-col>
+          </v-row>
+        </v-container>
+        
+        <v-spacer></v-spacer>
+        <v-container fluid>
+          <h2 class="text-center display-3">Hosting Providers</h2>
+          <v-row justify="center" align="center">
+            <v-col v-for="item in hosting" :key="item.id" cols="12" md="4" class="my-12 mx-auto pa-3 d-flex flex-column text-center" >
+         <!--       <v-card
+                raised
+                hover
+                outlined
+                elevation="4"
+                class="  text-center flex d-flex flex-column"
+              > -->
+                <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
+                  <!-- height="200px" -->
+           <!--     <v-img
+                  class="white--text align-end "
+                   lazy-src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
+                  src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
+                > -->
+                <v-icon color="grey">{{
+                      item.icon
+                    }}</v-icon>
+
+                      <h1 class="justify-center display-1 text-center grey--text">{{ item.name }}</h1>
+                  <h3 class=" justify-center text-h5 grey--text pb-0">{{item.small_description}}</h3>
+                  <p class="justify-center grey--text">{{ item.description }} </p> 
+           <!--     </v-img> -->
+                <!--  <v-card-actions> </v-card-actions> -->
+              <!-- </v-card -->
+            </v-col>
+          </v-row>
+        </v-container>
+        
+        <v-spacer></v-spacer>
+        <v-container fluid>
+          <h2 class=" display-3 text-center">Project TreeView</h2>
           <v-row justify="center" align="center">
             <v-col cols="12" md="4">
               <v-treeview
@@ -277,7 +351,7 @@ export default {
           small_description: "Node Package Manager",
           description:
             "Package manager for the JavaScript programming language",
-          icon: "mdi-package-variant",
+          icon: "mdi-npm",
         },
         {
           id: 2,
@@ -285,7 +359,7 @@ export default {
           small_description: "",
           description:
             "Software that executes JavaScript code on the backend / server and frontend / interface (depending only on the libraries and frameworks used)",
-          icon: "mdi-language-javascript",
+          icon: "mdi-nodejs",
         },
         {
           id: 3,
@@ -308,7 +382,7 @@ export default {
           name: "WebPack",
           small_description: "JavaScript module packer",
           description: "",
-          icon: "mdi-cisco-webex",
+          icon: "mdi-webpack",
         },
         {
           id: 2,
@@ -316,7 +390,7 @@ export default {
           small_description: "Vuetify UI Framework",
           description:
             "Vuetify is a Vue UI Library with beautifully handcrafted Material Components",
-          icon: "mdi-material-ui",
+          icon: "mdi-vuetify",
         },
         {
           id: 3,
@@ -339,7 +413,23 @@ export default {
           small_description: "",
           description:
             "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
-          icon: "mdi-language-css3",
+          icon: "mdi-sass",
+        },
+      ],
+      hosting: [
+        {
+          id: 1,
+          name: "gh-pages",
+          small_description: "GitHub Pages",
+          description: "",
+          icon: "mdi-cisco-webex",
+        },
+        {
+          id: 2,
+          name: "Netlify",
+          small_description: "",
+          description: "",
+          icon: "mdi-material-ui",
         },
       ],
       contactLinks: [
@@ -369,84 +459,193 @@ export default {
         },
       ],
 
-
-
-
-
-
-
-
-
-
- initiallyOpen: ['public'],
+      initiallyOpen: ["src"],
       files: {
-        html: 'mdi-language-html5',
-        js: 'mdi-nodejs',
-        json: 'mdi-code-json',
-        md: 'mdi-language-markdown',
-        pdf: 'mdi-file-pdf',
-        png: 'mdi-file-image',
-        txt: 'mdi-file-document-outline',
-        xls: 'mdi-file-excel',
+        html: "mdi-language-html5",
+        js: "mdi-nodejs",
+        vue: "mdi-vuejs",
+        json: "mdi-code-json",
+        md: "mdi-language-markdown",
+        pdf: "mdi-file-pdf",
+        png: "mdi-file-image",
+        svg: "mdi-svg",
+        txt: "mdi-file-document-outline",
+        xls: "mdi-file-excel",
+        webpack: "mdi-webpack",
       },
       tree: [],
       items: [
         {
-          name: '.git',
+          name: ".git",
         },
         {
-          name: 'node_modules',
+          name: "dist",
         },
         {
-          name: 'public',
+          name: "node_modules",
+        },
+        {
+          name: "public",
           children: [
             {
-              name: 'static',
-              children: [{
-                name: 'logo.png',
-                file: 'png',
-              }],
+              name: "icons",
+              children: [
+                {
+                  name: "logo.png",
+                  file: "png",
+                },
+              ],
             },
             {
-              name: 'favicon.ico',
-              file: 'png',
+              name: "favicon.ico",
+              file: "png",
             },
             {
-              name: 'index.html',
-              file: 'html',
+              name: "index.html",
+              file: "html",
+            },
+            {
+              name: "manifest.json",
+              file: "json",
             },
           ],
         },
         {
-          name: '.gitignore',
-          file: 'txt',
+          name: "src",
+          children: [
+            {
+              name: "components",
+              children: [
+                {
+                  name: "PContactInfo.vue",
+                  file: "vue",
+                },
+                {
+                  name: "PFooter.vue",
+                  file: "vue",
+                },
+                {
+                  name: "PProjects.vue",
+                  file: "vue",
+                },
+                {
+                  name: "PToolbar.vue",
+                  file: "vue",
+                },
+                {
+                  name: "Scrool-icon.vue",
+                  file: "vue",
+                },
+              ],
+            },
+            {
+              name: "images",
+              children: [
+                {
+                  name: "banner.jpg",
+                  file: "png",
+                },
+                {
+                  name: "mercedes-benz.io.svg",
+                  file: "svg",
+                },
+                {
+                  name: "mercedes-benz.io.white.png",
+                  file: "png",
+                }
+              ],
+            },
+            {
+              name: "plugins",
+              children: [
+                {
+                  name: "vuetify.js",
+                  file: "js",
+                }
+              ],
+            },
+            {
+              name: "router",
+              children: [
+                {
+                  name: "index.js",
+                  file: "js",
+                }
+              ],
+            },
+            {
+              name: "styles",
+              children: [
+                {
+                  name: "main.scss",
+                  file: "scss",
+                }
+              ],
+            },
+            {
+              name: "views",
+              children: [
+                {
+                  name: "About.vue",
+                  file: "vue",
+                },
+                {
+                  name: "Detail.vue",
+                  file: "vue",
+                },
+                {
+                  name: "Home.vue",
+                  file: "vue",
+                },
+                {
+                  name: "NotFound.vue",
+                  file: "vue",
+                },
+                {
+                  name: "Work.vue",
+                  file: "vue",
+                }
+              ],
+            },
+            {
+              name:"App.vue",
+              file: "vue"
+            },
+            {
+              name:"greeting.js",
+              file: "js"
+            },
+            {
+              name:"index.js",
+              file: "js"
+            },
+            {
+              name:"main.js",
+              file: "js"
+            }
+          ],
         },
         {
-          name: 'babel.config.js',
-          file: 'js',
+          name: ".gitignore",
+          file: "txt",
         },
         {
-          name: 'package.json',
-          file: 'json',
+          name: "package-lock.json",
+          file: "js",
         },
         {
-          name: 'README.md',
-          file: 'md',
+          name: "package.json",
+          file: "json",
         },
         {
-          name: 'vue.config.js',
-          file: 'js',
+          name: "README.md",
+          file: "md",
         },
         {
-          name: 'yarn.lock',
-          file: 'txt',
-        },
+          name: "webpack.config.js",
+          file: "webpack",
+        }
       ],
-
-
-
-
-
     };
   },
 };
