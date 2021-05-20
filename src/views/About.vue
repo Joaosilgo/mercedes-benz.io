@@ -294,7 +294,7 @@
         </v-container>
       </div>
     </v-container>
-<!--
+    <!--
     <v-layout fill-height align-center>
       <v-container>
         <v-row justify="center">
@@ -444,6 +444,13 @@ export default {
           small_description: "The Progressive JavaScript Framework",
           description: "",
           icon: "mdi-vuejs",
+        },
+        {
+          id: 7,
+          name: "Grunt",
+          small_description: "The JavaScript Task Runner",
+          description: "",
+          icon: "mdi-cow",
         },
       ],
       hosting: [
