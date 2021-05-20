@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "webpack serve",
+    "dev": "webpack serve --mode development --env development",
     "deploy": "gh-pages -d dist"
   },
   "author": "João Gomes",
@@ -22,6 +23,7 @@
     "css-loader": "^5.2.4",
     "deepmerge": "^4.2.2",
     "file-loader": "^6.2.0",
+    "grunt-webpack": "^4.0.3",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.6.0",
@@ -47,6 +49,7 @@
     "core-js": "^3.12.1",
     "foundation-sites": "^6.6.3",
     "gh-pages": "^3.1.0",
+    "grunt": "^1.4.0",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1",
     "vuetify": "^2.4.11",

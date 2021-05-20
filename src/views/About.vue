@@ -137,117 +137,139 @@
         </v-row>
       </v-container>
     </v-layout>
-     
-        <v-spacer></v-spacer>
 
-    <v-container align-center  fluid class="mt-5">
+    <v-spacer></v-spacer>
+
+    <v-container align-center fluid class="mt-5">
       <div class="block latestPostBlock">
         <v-container fluid>
-          <h2 class="text-center display-3">Development Tools</h2>
+          <h2 class="text-center display-1">Development Tools</h2>
           <v-row justify="center" align="center">
-            <v-col v-for="item in tools" :key="item.id" cols="12" md="4" class="mx-auto my-12 pa-3 text-center d-flex flex-column">
-         <!--      <v-card
+            <v-col
+              v-for="item in tools"
+              :key="item.id"
+              cols="12"
+              md="4"
+              class="mx-auto my-12 pa-3 text-center d-flex flex-column"
+            >
+              <!--      <v-card
                 raised
                 hover
                 outlined
                 elevation="4"
                 class=" flex d-flex flex-column"  
               > -->
-                <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
-         <!--       <v-img
+              <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
+              <!--       <v-img
                   class="white--text align-end"
                   lazy-src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
                   src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
                 >  -->
-                 <v-icon color="grey">{{
-                      item.icon
-                    }}</v-icon>
+              <v-icon x-large color="grey">{{ item.icon }}</v-icon>
 
-                      <h1 class="justify-center display-1 text-center grey--text">{{ item.name }}</h1>
-                  <h3 class="justify-center text-h5 grey--text pb-0">{{item.small_description}}</h3>
-                  <p class="justify-center grey--text">{{ item.description }} </p> 
-<!-- 
+              <h1 class="justify-center display-1 text-center grey--text">
+                {{ item.name }}
+              </h1>
+              <h3 class="justify-center text-h5 grey--text pb-0">
+                {{ item.small_description }}
+              </h3>
+              <p class="justify-center grey--text">{{ item.description }}</p>
+              <!-- 
                   <v-card-title class="justify-center display-1 text-center grey--text">{{ item.name }}</v-card-title>
                   <v-card-subtitle class="text-h5 grey--text pb-0">{{item.small_description}}</v-card-subtitle>
                   <v-card-text class="grey--text"><div>{{ item.description }}</div></v-card-text> -->
               <!--  </v-img> -->
-                <!--  <v-card-actions> </v-card-actions> -->
-            <!--   </v-card>  -->
+              <!--  <v-card-actions> </v-card-actions> -->
+              <!--   </v-card>  -->
             </v-col>
           </v-row>
         </v-container>
-        
+
         <v-spacer></v-spacer>
         <v-container fluid>
-          <h2 class="text-center display-3">Technologies</h2>
+          <h2 class="text-center display-1">Technologies</h2>
           <v-row justify="center" align="center">
-            <v-col v-for="item in technologies" :key="item.id" cols="12" md="4" class="mx-auto my-12 pa-3 text-center d-flex flex-column">
-         <!--     <v-card
+            <v-col
+              v-for="item in technologies"
+              :key="item.id"
+              cols="12"
+              md="4"
+              class="mx-auto my-12 pa-3 text-center d-flex flex-column"
+            >
+              <!--     <v-card
                 raised
                 hover
                 outlined
                 elevation="4"
                 class="  flex d-flex flex-column"
               > -->
-                <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
-        <!--         <v-img
+              <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
+              <!--         <v-img
                   class="white--text align-end"
                    lazy-src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
                   src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
                 > -->
-             
 
+              <v-icon x-large color="grey">{{ item.icon }}</v-icon>
 
-                 <v-icon color="grey">{{
-                      item.icon
-                    }}</v-icon>
-
-                      <h1 class="justify-center display-1 text-center grey--text">{{ item.name }}</h1>
-                  <h3 class="justify-center text-h5 grey--text pb-0">{{item.small_description}}</h3>
-                  <p class="justify-center grey--text">{{ item.description }} </p> 
-           <!--     </v-img> -->
-                <!--  <v-card-actions> </v-card-actions> -->
-           <!--   </v-card>  -->
+              <h1 class="justify-center display-1 text-center grey--text">
+                {{ item.name }}
+              </h1>
+              <h3 class="justify-center text-h5 grey--text pb-0">
+                {{ item.small_description }}
+              </h3>
+              <p class="justify-center grey--text">{{ item.description }}</p>
+              <!--     </v-img> -->
+              <!--  <v-card-actions> </v-card-actions> -->
+              <!--   </v-card>  -->
             </v-col>
           </v-row>
         </v-container>
-        
+
         <v-spacer></v-spacer>
         <v-container fluid>
-          <h2 class="text-center display-3">Hosting Providers</h2>
+          <h2 class="text-center display-1">Hosting Providers</h2>
           <v-row justify="center" align="center">
-            <v-col v-for="item in hosting" :key="item.id" cols="12" md="4" class="my-12 mx-auto pa-3 d-flex flex-column text-center" >
-         <!--       <v-card
+            <v-col
+              v-for="item in hosting"
+              :key="item.id"
+              cols="12"
+              md="4"
+              class="my-12 mx-auto pa-3 d-flex flex-column text-center"
+            >
+              <!--       <v-card
                 raised
                 hover
                 outlined
                 elevation="4"
                 class="  text-center flex d-flex flex-column"
               > -->
-                <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
-                  <!-- height="200px" -->
-           <!--     <v-img
+              <!-- <v-img class="white--text align-end" height="200px" :src="item.src"> -->
+              <!-- height="200px" -->
+              <!--     <v-img
                   class="white--text align-end "
                    lazy-src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
                   src="https://images.unsplash.com/photo-1568332339712-fa479d5494fa?ixid=MnwxOTkyMTB8MHwxfGNvbGxlY3Rpb258N3wxODM2NjgwNHx8fHx8Mnx8MTYyMDY5ODMzOA&ixlib=rb-1.2.1"
                 > -->
-                <v-icon color="grey">{{
-                      item.icon
-                    }}</v-icon>
+              <v-icon x-large color="grey">{{ item.icon }}</v-icon>
 
-                      <h1 class="justify-center display-1 text-center grey--text">{{ item.name }}</h1>
-                  <h3 class=" justify-center text-h5 grey--text pb-0">{{item.small_description}}</h3>
-                  <p class="justify-center grey--text">{{ item.description }} </p> 
-           <!--     </v-img> -->
-                <!--  <v-card-actions> </v-card-actions> -->
+              <h1 class="justify-center display-1 text-center grey--text">
+                {{ item.name }}
+              </h1>
+              <h3 class="justify-center text-h5 grey--text pb-0">
+                {{ item.small_description }}
+              </h3>
+              <p class="justify-center grey--text">{{ item.description }}</p>
+              <!--     </v-img> -->
+              <!--  <v-card-actions> </v-card-actions> -->
               <!-- </v-card -->
             </v-col>
           </v-row>
         </v-container>
-        
+
         <v-spacer></v-spacer>
         <v-container fluid>
-          <h2 class=" display-3 text-center">Project TreeView</h2>
+          <h2 class="display-1 text-center">Project TreeView</h2>
           <v-row justify="center" align="center">
             <v-col cols="12" md="4">
               <v-treeview
@@ -272,7 +294,7 @@
         </v-container>
       </div>
     </v-container>
-
+<!--
     <v-layout fill-height align-center>
       <v-container>
         <v-row justify="center">
@@ -296,6 +318,7 @@
         </v-row>
       </v-container>
     </v-layout>
+    -->
   </div>
 </template>
 
@@ -414,6 +437,13 @@ export default {
           description:
             "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
           icon: "mdi-sass",
+        },
+        {
+          id: 6,
+          name: "Vue",
+          small_description: "The Progressive JavaScript Framework",
+          description: "",
+          icon: "mdi-vuejs",
         },
       ],
       hosting: [
@@ -552,7 +582,7 @@ export default {
                 {
                   name: "mercedes-benz.io.white.png",
                   file: "png",
-                }
+                },
               ],
             },
             {
@@ -561,7 +591,7 @@ export default {
                 {
                   name: "vuetify.js",
                   file: "js",
-                }
+                },
               ],
             },
             {
@@ -570,7 +600,7 @@ export default {
                 {
                   name: "index.js",
                   file: "js",
-                }
+                },
               ],
             },
             {
@@ -579,7 +609,7 @@ export default {
                 {
                   name: "main.scss",
                   file: "scss",
-                }
+                },
               ],
             },
             {
@@ -604,25 +634,25 @@ export default {
                 {
                   name: "Work.vue",
                   file: "vue",
-                }
+                },
               ],
             },
             {
-              name:"App.vue",
-              file: "vue"
+              name: "App.vue",
+              file: "vue",
             },
             {
-              name:"greeting.js",
-              file: "js"
+              name: "greeting.js",
+              file: "js",
             },
             {
-              name:"index.js",
-              file: "js"
+              name: "index.js",
+              file: "js",
             },
             {
-              name:"main.js",
-              file: "js"
-            }
+              name: "main.js",
+              file: "js",
+            },
           ],
         },
         {
@@ -644,7 +674,7 @@ export default {
         {
           name: "webpack.config.js",
           file: "webpack",
-        }
+        },
       ],
     };
   },
